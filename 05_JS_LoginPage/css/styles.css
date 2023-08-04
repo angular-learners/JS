@@ -28,6 +28,12 @@ input[type="checkbox"]{
     width: 25px;
     height: 25px;
 }
+input[type="checkbox"]:checked{
+    width: 25px;
+    height: 25px;
+    color: linear-gradient(to right, #5D26C1, #a17fe0, #59C173);
+
+}
 .form-control{
     margin-top: 14px;
 }
