@@ -5,8 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Console</title>
-    <script src="js/script.js"></script>
+
     <style>
+        body {
+            background: #7F00FF;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #E100FF, #7F00FF);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
         .title {
             background-color: black;
             color: white;
@@ -14,11 +24,50 @@
             text-align: center;
             font-family: monospace;
         }
+
+        .container {
+            margin: auto;
+            width: 400px;
+            height: 600px;
+            background-color: #fff;
+        }
+
+        .todos {
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            padding-top: 100px;
+
+        }
+
+        button {
+            padding: 12px;
+            margin-left: 10px;
+            background: linear-gradient(to right, #E100FF, #7F00FF);
+            border: none;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        input {
+            padding: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <h1 class="title">Console</h1>
+    <!-- <h1 class="title">Console</h1> -->
+
+    <div class="container">
+        <div class="todos">
+            <div> <input type="text" name="course" id="course"></div>
+            <div> <button type="button" onclick="add()">ADD</button></div>
+        </div>
+        <div id="courses" style="padding-left: 75px;
+    padding-top: 10px;"></div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
