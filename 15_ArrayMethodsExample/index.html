@@ -28,6 +28,33 @@
             align-items: center;
             justify-content: center;
             margin: auto;
+            margin-top: 40px;
+        }
+
+        input {
+            padding: 14px;
+            margin-top: 6px;
+
+        }
+
+        .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: linear-gradient(to right, #4286f4, #373B44);
+            padding: 12px;
+            border: none;
+            margin-top: 6px;
+        }
+
+        .op {
+            margin-top: 8px;
+
+
+        }
+
+        .output-text {
+            font-weight: bold;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -43,13 +70,13 @@
                 <input type="number" name="number2" id="number2">
             </div>
             <div>
-                <button type="button" onclick="calculate('add')">ADD</button>
-                <button type="button" onclick="calculate('sub')">SUB</button>
-                <button type="button" onclick="calculate('mul')">MUL</button>
-                <button type="button" onclick="calculate('div')">DIV</button>
+                <button type="button" class="btn" onclick="calculate('add')">ADD</button>
+                <button type="button" class="btn" onclick="calculate('sub')">SUB</button>
+                <button type="button" class="btn" onclick="calculate('mul')">MUL</button>
+                <button type="button" class="btn" onclick="calculate('div')">DIV</button>
             </div>
-            <div>
-                <span>Ouput::</span><span id="output"></span>
+            <div class="op">
+                <span class="output-text">Ouput::</span><span id="output"></span>
             </div>
         </form>
     </div>
