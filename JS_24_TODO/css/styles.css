@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    background: #009FFF;
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+
+}
+
+.todo-container {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 6px;
+    box-shadow: 1px 2px grey;
+    margin: auto;    
+    margin-top: 40px;
+
+}
+.todos{
+     display: flex;
+     align-items: flex-start;
+}
+
+input{
+     padding: 12px;
+     width: 100%;
+     outline: none;
+}
+.add-btn{
+    border: none;
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+    width: 60px;
+    padding: 13px;
+    margin-left: 40px;
+
+}
+
+li{
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    color: #fff;
+    border-left:  2px solid #fff;
+    margin-top: 10px;
+    padding: 6px;
+    list-style-type: none;
+}

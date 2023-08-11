@@ -38,3 +38,10 @@ console.log(fruits);
 //fruits.splice(1, 1); ["banana", "apple","grapes", "strawberry"]
 fruits.splice(1, 2)
 console.log(fruits);
+
+
+
+
+
+
+
