@@ -1,0 +1,38 @@
+
+body {
+    background: #3494E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6EAD, #3494E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 6px;
+
+}
+
+.btn-counter{
+    border: none;
+    background: linear-gradient(to right, #EC6EAD, #3494E6);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+    width: 100px;
+    padding: 8px;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+.counter-text{
+    color: linear-gradient(to right, #EC6EAD, #3494E6);
+}

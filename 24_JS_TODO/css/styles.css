@@ -49,3 +49,12 @@ li{
     padding: 6px;
     list-style-type: none;
 }
+
+.btn{
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    color: #fff;
+    border: none;
+    padding: 8px;
+    display: inline;
+
+}
