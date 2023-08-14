@@ -26,9 +26,10 @@ function like() {
     ///console.log(`${count}`);
 }
 function disLike() {
-
-    count = count - 1;
-    document.getElementById('counter').innerHTML = count;
+    if (count > 0) {
+        count = count - 1;
+        document.getElementById('counter').innerHTML = count;
+    }
 }
 
 
