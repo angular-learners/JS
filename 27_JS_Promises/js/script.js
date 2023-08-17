@@ -89,7 +89,7 @@ function getAllUsers() {
             console.log(data);
             let users = [...data];
             users.sort((a, b) => a.username.localeCompare(b.username));
-            users.sort((a, b) => a.email.localeCompare(b.email));
+
             users.sort((a, b) => a.name.localeCompare(b.name));
             users.forEach((user) => {
                 let { id, name, username, email } = user;
@@ -126,5 +126,33 @@ function getAllUsers() {
     })
 }
 
+function sortByEmail(sortValue) {
+    if (sortValue == "ASCE") {
+        let rows = [...tbody.getElementsByTagName('tr')];
+        rows.sort((rowA, rowB) => {
+            let emailA = rowA.querySelector('td:nth-child(4)').textContent;
+            let emailB = rowB.querySelector('td:nth-child(4)').textContent;
+            return emailA.localeCompare(emailB);
+        });
+        tbody.innerHTML = "";
+        rows.forEach(row => {
+            tbody.appendChild(row);
+        });
+    } else if (sortValue == "DESC") {
+        console.log(sortValue)
+        let rows = [...tbody.getElementsByTagName('tr')];
+        rows.sort((rowA, rowB) => {
+            let emailA = rowA.querySelector('td:nth-child(4)').textContent;
+            let emailB = rowB.querySelector('td:nth-child(4)').textContent;
+            return emailB.localeCompare(emailA);
+        });
+        tbody.innerHTML = "";
+        rows.forEach(row => {
+            tbody.appendChild(row);
+        });
+    }
+}
 getAllUsers();
+
+
 //()=>{}
