@@ -104,3 +104,120 @@ const findSort = () => {
 //  17 23 98
 
 findSort();
+
+
+/***
+ * 1.  Sample Input  : [90,890,30,40,50]
+ *   Sample Output :  890
+ *   Find the Maximum Value in the array
+ * 
+ * 
+ */
+
+
+findMax = () => {
+    let numbers = [90, 890, 30, 40, 50];
+    let max = 0;
+    numbers.forEach((number) => {
+        if (number > max) {
+            max = number;
+        }
+    })
+
+    console.log(`Maximum Number :${max}`);
+}
+
+findMax();
+
+/***
+ * 2.  Sample Input  : [90,890,30,40,50]
+ *   Sample Output :  30
+ *   Find the Maximum Value in the array
+ * 
+ * 
+ */
+
+findMin = () => {
+    let numbers = [90, 890, 30, 40, 50];
+    let min = numbers[0];
+    numbers.forEach((number) => {
+        if (number < min) {
+            min = number;
+        }
+    })
+
+    console.log(`Minimum Number :${min}`);
+}
+
+findMin();
+/**
+ * Reverse String
+ * 
+ */
+
+reverseString = () => {
+    let myName = "Virat Kholi Cricketer";
+    let str = "";
+    for (let i = myName.length - 1; i >= 0; i--) {
+        str = str + myName[i];
+
+    }
+    console.log(str);
+    console.log(myName.length);
+
+}
+
+reverseString();
+
+/***
+ *  4. Sample Input: [10, 3, 5, 6, 7, 12, 14];
+ *   Sample Output:[4,3]
+ *   SampleOutput:{ odd:3,even:4}
+ */
+countEvenNumbersAndOddNumbers = () => {
+    let numbers = [10, 3, 5, 6, 7, 12, 14];
+    let eventCount = 0;
+    let oddCount = 0;
+    let evenNumbers = [];
+    let oddNumbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+            //  eventCount = eventCount + 1;
+            console.log(numbers[i]);
+            evenNumbers.push(numbers[i]);
+        } else {
+            //oddCount = oddCount + 1;
+            //console.log(numbers[i])
+            oddNumbers.push(numbers[i]);
+        }
+    }
+
+    // console.log(`Even Count:${eventCount}`);
+    // console.log(`Odd Count:${oddCount}`);
+    let myNumbers = {
+        even: evenNumbers,
+        odd: oddNumbers
+    }
+    console.log(myNumbers);
+
+
+
+}
+
+countEvenNumbersAndOddNumbers();
+
+
+
+/***
+ *  5. Sample Input: [10, 10, 3, 3, 4, 5, 14,7,10];
+ *   Sample Output:[10,3,4,5,14,7]
+ *
+ */
+
+removeDuplicates = () => {
+    let numbers = [10, 10, 3, 3, 4, 5, 14, 7, 10];
+    let uniqueNumbers = new Set([...numbers]);
+    console.log(uniqueNumbers);
+}
+
+removeDuplicates();
