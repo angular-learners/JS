@@ -3,11 +3,15 @@ const GET_PRODUCTS_URL = "https://fakestoreapi.com/products";
 let productsContainer = document.getElementById('products-container');
 let cartCount = document.getElementById('cart-count');
 let counter = 0;
+let myProducts = [];
 
-addToCart = () => {
-    console.log("Cart Clicked");
+addToCart = (product) => {
+    console.log(product);
     counter = counter + 1;
     cartCount.textContent = counter;
+    myProducts.push(product);
+    localStorage.setItem('myProducts', JSON.stringify(myProducts));
+    localStorage.setItem('productsCount', counter);
 }
 
 async function getAllProducts() {
@@ -24,7 +28,9 @@ async function getAllProducts() {
             let button = document.createElement("button");
 
 
-            button.addEventListener('click', addToCart)
+            button.addEventListener('click', () => {
+                addToCart(product);
+            },)
 
             card.classList.add("card");
 

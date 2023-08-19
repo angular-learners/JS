@@ -1,3 +1,4 @@
+// "use strict";
 /**
  *  Sample Input :  [10,20,30,40]
  *  Sample Output:   100
@@ -126,7 +127,6 @@ findMax = () => {
 
     console.log(`Maximum Number :${max}`);
 }
-
 findMax();
 
 /***
@@ -221,3 +221,99 @@ removeDuplicates = () => {
 }
 
 removeDuplicates();
+
+
+
+/***
+ *  1 .Give a input and check wheather input is prime or not 
+ *   
+ *
+ */
+
+
+isPrime = (value) => {
+    let counter = 0;
+    for (let i = 2; i <= value; i++) {
+        if (value % i == 0) {
+            counter = counter + 1;
+        }
+    }
+    if (counter >= 2) {
+        console.log(`${value} is Not Prime Number`);
+    } else {
+        console.log(`It is a Prime Number`);
+
+    }
+}
+
+isPrime(11)
+
+/***
+ *  2.Check Wheather String is Palindrome or Not   
+ *      ex: Nitin , madam, dad ,mom
+ */
+
+isPalindromeOrNot = (input) => {
+    let isPalindrome = false;
+    for (let i = 0; i < input.length; i++) {
+        if (input[0].toLowerCase() == input[input.length - 1]) {
+            isPalindrome = true;
+            break;
+        }
+    }
+    //(isPalindrome == true) ? `${input} is a Palindrome` : `${input} is Not a Palindrome`;
+    if (isPalindrome == true) {
+        console.log(`${input} is a Palindrome`)
+    } else {
+        console.log(`${input} is Not a Palindrome`)
+    }
+
+}
+
+isPalindromeOrNot("Nitin");
+
+
+/***
+ *  3. Sample Input let array=["sai","kumar",1,2,3,4,"Raj"];
+ * 
+ *     Sample Output  ["sai","kumar","Raj"];
+ */
+
+
+printOnlyStrings = () => {
+    let array = ["sai", "kumar", 1, 2, 3, 4, "Raj"];
+    let strArr = [];
+    for (let i = 0; i < array.length; i++) {
+        if (typeof (array[i]) === 'string') {
+            strArr.push(array[i]);
+        }
+    }
+
+    console.log(`Output:${strArr}`)
+
+}
+
+printOnlyStrings();
+
+
+/***
+ *  4.  What is difference between let,const,var
+ *
+ *          var is a Global Variable  Global Scope
+ *          let ,const are functional scope
+ *          When we declare with let and var we can reassign the values
+ *          When we use const we cannot resassign the value because it is a constant variable
+ */
+
+
+
+
+
+/***
+ *  5.  What is strict in JS?
+ *
+ *
+ */
+
+a = 10;
+console.log(a);
