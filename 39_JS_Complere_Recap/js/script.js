@@ -42,24 +42,35 @@ const GET_ALL_COUNTRIES = "https://api.sportmonks.com/v3/core/countries";
 // };
 
 async function getAllCountries() {
-    let countries = await fetch(GET_ALL_COUNTRIES, {
-        method: "GET",
-        headers: {
-            Authorization: "Your API KEY",
-        }
-    });
+    // let countries = await fetch("https://api.sportmonks.com/v3/core/countries", {
+    //     method: "GET",
+    // headers: {
+    //     Authorization: "2sp2ZbCm6SurCs1XccjXTtYhuOGXtcC6DuBuNwCfSLq6qMPrzGGIAptPV2H7",
+    //     "Content-Type": "application/json", // Specify the content type
+    //     "Accept": "application/json", // Specify the accepted response format
+    // },
+    // });
 
-    try {
-        let countryList = await countries.json();
-        console.log(countryList);
-    } catch (error) {
-        console.log(error);
-    }
+    // try {
+    //     let countryList = await countries.json();
+    //     console.log(countryList);
+    // } catch (error) {
+    //     console.log(error);
+    // }
 
+    let key = "2sp2ZbCm6SurCs1XccjXTtYhuOGXtcC6DuBuNwCfSLq6qMPrzGGIAptPV2H7";
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+
+    fetch(`https://api.sportmonks.com/v3/core/countries?Authorization=${key}`, requestOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
 
-
-//getAllCountries();
+getAllCountries();
 
 
 
@@ -123,4 +134,4 @@ function createElements(myUsers) {
 }
 
 
-getAllUsers();
+//getAllUsers();

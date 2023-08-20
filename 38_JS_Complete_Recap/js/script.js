@@ -4,6 +4,11 @@ let productsContainer = document.getElementById('products-container');
 let cartCount = document.getElementById('cart-count');
 let counter = 0;
 let myProducts = [];
+let myCount = JSON.parse(localStorage.getItem('productsCount'));
+if (myCount) {
+    cartCount.textContent = myCount;
+}
+
 
 addToCart = (product) => {
     console.log(product);
@@ -27,24 +32,23 @@ async function getAllProducts() {
             let h4 = document.createElement("h4");
             let button = document.createElement("button");
 
-
             button.addEventListener('click', () => {
                 addToCart(product);
             },)
 
             card.classList.add("card");
-
             h2.textContent = title;
             img.src = image;
             h4.textContent = price;
             button.textContent = "Add to Cart";
-
             card.append(h2);
             card.append(img);
             card.append(h4);
             card.append(button);
             productsContainer.append(card);
         })
+    }).catch((error) => {
+        console.log(error);
     })
 
 
