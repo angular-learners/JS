@@ -1,0 +1,23 @@
+body{
+    padding: 30px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+.card{
+    background-color: #fff;
+    border-radius: 4px;
+    min-height: 250px;
+    width: 250px;
+    padding: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    margin-left: 5px;
+}
