@@ -317,3 +317,113 @@ printOnlyStrings();
 
 a = 10;
 console.log(a);
+
+
+/**
+ *    1. difference between  ==  and ===
+ * 
+ * 
+ */
+
+function myMethod() {
+    let company = "tcs";
+
+    if (company == "tcs") {
+        console.log("Normal Check");
+    }
+    if (company === "tcs") {
+        console.log(typeof (company));
+    }
+}
+
+myMethod();
+
+
+
+/**
+ *    2. difference between  null  and undefined
+ * 
+ * 
+ */
+
+function displayMyName() {
+    // let myName = null;
+    // console.log(myName);
+    // myName = "Sai";
+    // console.log(myName);
+
+    let myName;
+    console.log(myName);
+
+}
+
+displayMyName();
+
+
+/**
+ *    3. concat arrays
+ *      let a=[10,20,30];
+ *      let b=[5,7,8];
+ * 
+ */
+
+function concatArray() {
+    let a = [10, 20, 30];
+    let b = [5, 7, 8];
+    let myArray = a.concat(b);
+    console.log(myArray);
+    let usingSpread = [...a, ...b];
+    console.log(usingSpread);
+}
+
+concatArray();
+/**
+ *    4. concat arrays  And sort with decending 
+ *      let a=[10,20,30];
+ *      let b=[5,7,8];
+ * 
+ */
+
+
+function concatArraySortDEC() {
+    let a = [10, 20, 30];
+    let b = [5, 7, 8];
+    let myArray = a.concat(b);
+    console.log(myArray);
+    let usingSpread = [...a, ...b];
+    usingSpread.sort((a, b) => b - a);
+    console.log(usingSpread);
+}
+
+concatArraySortDEC();
+
+
+/**
+ *      5.         
+ *      let a=[10,20,30,7,8,9,10];
+ *     
+ * 
+ */
+
+function isEven() {
+    let a = [7, 9];
+    let flag = false;
+    let count = 0;
+
+    a.forEach((number) => {
+        if (number % 2 == 0) {
+            count = count + 1;
+            console.log(count)
+        }
+    })
+
+    if (count >= 1) {
+        flag = true;
+        console.log(flag);
+    } else {
+        console.log(flag);
+    }
+}
+
+
+isEven();
